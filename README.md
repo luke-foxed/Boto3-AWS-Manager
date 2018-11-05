@@ -1,6 +1,7 @@
 # Boto3-AWS-Manager
 
 This app is menu driven and runs based off user input. It allows for the user to create new EC2 instances, tag those instances and delete them. 
+
 It also allows for the user to create S3 buckets and populate those buckets. From there, the user can SSH into an ec2 instance, which will start an NGINX server and move any image from
 the specified bucket into a new html file within the NGINX server - and then load that html file containing the bucket image.
 
@@ -8,15 +9,15 @@ The app also features a resource monitoring script (check_webserver.py) to be us
 
 The recommended usage of the app is as follows:
 
-  1. Create an instance
-  2. Add tag instance (optional)
-  3. Create a bucket
-  4. Add to a bucket (such as an image)
-  5. Move bucket image to nginx
-  5. SSH into instance (to run 'check_webserver' script)
-  6. Delete bucket contents
-  7. Delete a bucket
-  8. Delete an instance
+  - Create an instance
+  - Add tag instance (optional)
+  - Create a bucket
+  - Add to a bucket (such as an image)
+  - Move bucket image to nginx
+  - SSH into instance (to run 'check_webserver' script)
+  - Delete bucket contents
+  - Delete a bucket
+  - Delete an instance
 
 
 NOTE: The 'put_bucket' method works as follows - The bucket name and the name of the object(must be inside folder containing this script) must be specified, error handling exists for both. Once both checks are met the object is uploaded. A link is then constructed from the entered bucket and object names, which is placed into an <img> tag within an echo command creating the HTML file. This file is stored inside the same folder.
