@@ -1,4 +1,4 @@
-READ ME - Luke Fox (20076173)
+# Boto3 AWS Manager
 
 This app is menu driven and runs based off user input. The recommended usage of the app is as follows:
 
